@@ -2,10 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('git checkout') {
             steps {
-                echo 'Hello World'
+                git branch: 'main', url: 'https://github.com/Sumeet-Anand12/dineshJenkins.git'
             }
+            
+        }
+        stage('print data')
+        {
+            echo "hello Dinesh"
         }
     }
 }
